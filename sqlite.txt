@@ -1,0 +1,14 @@
+//삽입
+INSERT INTO daysmemo (memo , weatherinfo , created) VALUES
+	( "이것은 테스트이다 1",  "1", strftime('%Y%m%d') ),
+	( "이것은 테스트이다 2",  "2", strftime('%Y%m%d') ),
+	( "이것은 테스트이다 3",  "3", strftime('%Y%m%d') )
+
+
+//수정
+UPDATE daysmemo SET memo = "이것은 테스트 수정이다" WHERE idx = 1;
+
+
+//삭제
+DELETE FROM daysmemo WHERE idx = 2;
+DELETE FROM daysmemo WHERE created = '20210219';
