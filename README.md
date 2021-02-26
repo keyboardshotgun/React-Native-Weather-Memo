@@ -1,16 +1,19 @@
 # Project Summary
 
-> 간단한 달력기능과 사용자 설정 위치에 따른 날찌 정보 제공
+> 현재의 날씨정보 및 달력, 그리고 메모
+
 - 개발기간
   + 기획 및 API 결정 / UI 디자인 / 이미지 선별 및 수정 / 기본세팅 및 프로젝트 구조, 라이브러리 설치 : 1일
   + 코드작성 : 7일
-  + 테스트 : 1일
+  + 테스트 및 리팩토링: 2일
+  
 - 특징 및 기능
   + 타입스크립트
   + 달력화면을 사용한 간단한 메모작성
   + 기상청 API를 통한 현재 위치 날씨정보 자동 저장
-  + sqlite를 사용한 로컬 데이터 CRUD
-  + 부르럽고 간결하게 처리된 동작 애니메이션
+  + sqlite Database CRUD
+  + 부르럽고 간결하게 처리된 애니메이션 처리
+ 
 - Project Common Dependencies
 
   [![React](https://img.shields.io/badge/React-v16.13.1-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/facebook/react)
@@ -25,75 +28,35 @@
 [![Redash](https://img.shields.io/badge/React--native--redash-v16.0.8-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/wcandillon/react-native-redash)
 </br></br></br>
 ***
-## Splash Screen
-- [![Splash](https://img.shields.io/badge/React--native--splash--screen-v3.2.0-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/crazycodeboy/react-native-splash-screen)
-- Android / iOS
-
-![1 splash_screen_60p_30s](https://user-images.githubusercontent.com/25360777/108144861-d3642000-710d-11eb-95b7-e2f1066196fd.gif)
-</br></br></br>
-***
-## Swipe & Touch Navigation / Animated Progress bar
+## 현재 날씨정보 조회
+![1](https://user-images.githubusercontent.com/25360777/109237771-94248600-7815-11eb-9bf8-242e66171991.gif)
 - [![Reanimated](https://img.shields.io/badge/React--native--reanimated-v2.0.0--rc.0-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://docs.swmansion.com/react-native-reanimated/)
-- 슬라이드 네비게이션 : rn-reanimated + PanGetstureHandler
-- 터치유형에 따른 반응처리 및 가속도 처리
-- Animated progress bar : HOC 형태로 개발
-
-![2 customSlider_60p_30s](https://user-images.githubusercontent.com/25360777/108144893-e1b23c00-710d-11eb-8430-e286ed92766a.gif)
+- 기상청 API를 사용한 실시간 날씨 정보
+- 새로고침 버튼으로 실시간으로 업데이트 처리
+- 설정지역 변경시 애니메이션으로 업데이트 상황 알림 
 </br></br></br>
 ***
-## Image viewer
-- [![Fast](https://img.shields.io/badge/React--native--fast--image-v8.2.4-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/DylanVann/react-native-fast-image)
-- 두개의 FlatList사용, onScrollMomentsEnd 이벤트로 상호작용
-- onEndReached 이벤트로 Pexels.com API 호출, 요청 당 10장 추가, 최대 120장 제한처리
-- Redux-saga와 immer.js로 status 관리
-
-![3 customImaageviwer_download_from_web_60p_30s](https://user-images.githubusercontent.com/25360777/108144918-ec6cd100-710d-11eb-934f-ce850e3593af.gif)
+## 지역설정
+![2-before](https://user-images.githubusercontent.com/25360777/109237782-98e93a00-7815-11eb-8fc4-6103cbcad678.gif)
+![2-complete](https://user-images.githubusercontent.com/25360777/109237788-9d155780-7815-11eb-8810-f3f7af6b298b.gif)   
+- [![Reanimated](https://img.shields.io/badge/React--native--reanimated-v2.0.0--rc.0-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://docs.swmansion.com/react-native-reanimated/)
+- 최적화 이전 / 최적화 이후
+- 대한민국 행정구역 json 데이터를 활용하여, 원하는 지역을 설정
+- UI 최적화 처리
 </br></br></br>
 ***
-## Web Image Download
-- [![Fetch](https://img.shields.io/badge/Rn--fetch--blob-v0.12.0-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/joltup/rn-fetch-blob)
-- 웹 이미지를 지정한 디바이스 저장소에 다운로드
-- 다운로드 완료/실패 Toast 알림
-- Android downloadmanager 다운로드 관리
-
-![4 image_download_60p_30s](https://user-images.githubusercontent.com/25360777/108144940-f5f63900-710d-11eb-8443-db68a10023a5.gif)
+## 달력 및 메모
+![3-before](https://user-images.githubusercontent.com/25360777/109237824-ba4a2600-7815-11eb-9d4c-c5971f211b21.gif)
+![3-complete](https://user-images.githubusercontent.com/25360777/109237832-bcac8000-7815-11eb-8241-4a3852415f27.gif)   
+- 최적화 이전 / 최적화 이후
+- dayjs로 계산한 달력 개발
+- sqlite를 활용하여 간단한 일일 메모 CRUD
 </br></br></br>
 ***
-## Global Modal Screen
-- [![Modal](https://img.shields.io/badge/React--native--svg-v12.1.0-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/react-native-svg/react-native-svg)
-- 글로벌 모달 컴포넌트 개발.
-- React-native-svg + RN-reanimated 개발
-
-![5 modal and animated_60p_30s](https://user-images.githubusercontent.com/25360777/108144962-ff7fa100-710d-11eb-898b-bdb9848d7544.gif)
-</br></br></br>
-***
-## Map & Locations
-- [![Mapbox](https://img.shields.io/badge/React--native--mapbox--gl-v8.1.0-white?style=flat&labelColor=blue&logoCoor=black&logo=google-maps)](https://github.com/react-native-mapbox-gl/maps)
-- mapbox API
-- 지정한 위치로의 이동 및 현재 위치 보 
-- map 컨트롤을 위한 버튼 개발
-
-![6 map_30p_15p](https://user-images.githubusercontent.com/25360777/108144976-07d7dc00-710e-11eb-8bed-eda478c2f53a.gif)
-</br></br></br>
-***
-## Simple Edit Image
-- [![CropPicker](https://img.shields.io/badge/React--native--image--crop--picker-v0.35.3-white?style=flat&labelColor=blue&logoCoor=black&logo=react)](https://github.com/ivpusic/react-native-image-crop-picker)
-- 디바이스 라이브러리
-- 이미지 crop 처리
-- 이미지 배경 처리
-
-![7 image modify_60p_25f_30s](https://user-images.githubusercontent.com/25360777/108144990-0efeea00-710e-11eb-8020-f2d9dbd74ecc.gif)
-![8 layered_60p_30s](https://user-images.githubusercontent.com/25360777/108145022-19b97f00-710e-11eb-9f25-1527e4441dd0.gif)
-</br></br></br>
-
 
 ## 후기 및 계획
-- mapbox는 처음 써봐서 삽질을 조금 했는데, 무조건 클래스형 컴포넌트로 개발하는게 정신건강에 좋음.
-- mapbox는 제공 정보 및 기능도 많고, 일단 무료라서 큰장점
-  하지만, 진짜 간단한 프로젝트에 추천함 (큰 프로젝트는 유료 Map API쓰는 것이 정답인듯)
-- react-native-reanimated v2 rc.0 좋기는 한데, 버전업을 조금더 하면 더 좋을 듯.
-- 덕분에 실기에서는 평균 60fps 보장 될듯.
-- 코드 리펙토링
-- FlatList 에서 VirtualList 변경 후 성능비교
-- 이미지 뷰어 디자인 변경해야 할 듯.
-- 차기 프로젝트, 날씨+메모 앱 기획 시작해야 할듯.
+- 달력기능 몇개 추가 (년,월 을 직접 선택을 위한 컨텍스트 메뉴 )
+- 자동으로 사용자의 위치정보를 받아서 날씨 정보 업데이트 -> 디바이스 자원소비량 증가 (베터리 및 네트워크 사용량)
+- 개선 : 수동버튼 처리 -> 사용자 동의사항 감소가 추가로 개선
+- React Component 생명주기 개선 및 간단한 코드 리펙토링으로 UI 성능향상.
+- 다음 프로젝트를 위한 분석데이터 준비해야 할듯.
