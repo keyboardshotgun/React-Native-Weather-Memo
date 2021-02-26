@@ -26,6 +26,10 @@
 
   [![Reanimated](https://img.shields.io/badge/React--native--reanimated-v2.0.0--rc.0-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://docs.swmansion.com/react-native-reanimated/)
 [![Redash](https://img.shields.io/badge/React--native--redash-v16.0.8-white?style=flat&labelColor=blue&logoColor=black&logo=react)](https://github.com/wcandillon/react-native-redash)
+
+[![기상청API](https://img.shields.io/badge/기상청API-white?style=flat&labelColor=blue&logoColor=black&logo=weather)](https://data.kma.go.kr/api/selectApiList.do?pgmNo=42)
+[![Sqlite](https://img.shields.io/badge/React--native--Sqlite--storage-white?style=flat&labelColor=blue&logoColor=black&logo=sqlite)](https://github.com/andpor/react-native-sqlite-storage)
+
 </br></br></br>
 ***
 ## 현재 날씨정보 조회
