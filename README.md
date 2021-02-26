@@ -54,7 +54,7 @@
 ![3-before](https://user-images.githubusercontent.com/25360777/109237824-ba4a2600-7815-11eb-9d4c-c5971f211b21.gif)
 ![3-complete](https://user-images.githubusercontent.com/25360777/109237832-bcac8000-7815-11eb-8241-4a3852415f27.gif)   
 - 최적화 이전 / 최적화 이후
-- dayjs로 계산한 달력 개발
+- dayjs를 활용한 달력 개발
 - sqlite를 활용하여 간단한 일일 메모 CRUD
 </br></br></br>
 ***
