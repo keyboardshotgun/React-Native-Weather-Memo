@@ -13,7 +13,7 @@
   + 달력화면을 사용한 간단한 메모작성
   + 기상청 API를 통한 현재 위치 날씨정보 자동 저장
   + sqlite Database CRUD
-  + 부르럽고 간결하게 처리된 애니메이션 처리
+  + 부드럽고 간결하게 처리된 애니메이션 처리
  
 - Project Common Dependencies
 
